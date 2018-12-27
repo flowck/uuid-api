@@ -4,6 +4,9 @@
   "description": "A REST API that expose an endpoint that generates uuid string",
   "main": "application.js",
   "scripts": {
+    "p": "prettier --write 'src/**/*.js'",
+    "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
+    "start": "nodemon src/application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,8 +21,6 @@
     "uuidv4": "^2.0.0"
   },
   "devDependencies": {
-    "onchange": "^5.2.0",
-    "prettier": "^1.15.3",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-config-standard": "^12.0.0",
@@ -27,6 +28,9 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.9",
+    "onchange": "^5.2.0",
+    "prettier": "^1.15.3"
   }
 }
