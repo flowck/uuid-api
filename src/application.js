@@ -14,6 +14,31 @@ app.get("/", (req, res) => {
   });
 });
 
+// Get a n uuid
+app.get("/:n", (req, res) => {
+  // Limit the response to 1000 per call
+  if (req.params.n > 1000) {
+    return res.status(400).json({
+      message: "Please, 1000 uuids at a time"
+    });
+  }
+
+  // Generate n uuids
+  let uuids = [];
+  for (let i = 0; i < req.params.n; i++) {
+    uuids.push({
+      uuid: uuid(),
+      createdAt: new Date()
+    });
+  }
+
+  // Send a the uuids
+  res.json({
+    uuids,
+    version: 4
+  });
+});
+
 // Listen it to a port
 const PORT = 4000 || process.env.PORT;
 app.listen(PORT, () => {
