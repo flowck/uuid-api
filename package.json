@@ -1,0 +1,32 @@
+{
+  "name": "uuid-api",
+  "version": "1.0.0",
+  "description": "A REST API that expose an endpoint that generates uuid string",
+  "main": "application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "uuid"
+  ],
+  "author": "Firmino Changani",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "uuidv4": "^2.0.0"
+  },
+  "devDependencies": {
+    "onchange": "^5.2.0",
+    "prettier": "^1.15.3",
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
