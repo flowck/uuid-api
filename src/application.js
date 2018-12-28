@@ -6,7 +6,7 @@ const uuid = require("uuidv4");
 const app = express();
 
 // Get a single uuid
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.json({
     uuid: uuid(),
     version: 4,
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 // Get a n uuid
-app.get("/:n", (req, res) => {
+app.get("/api/:n", (req, res) => {
   // Limit the response to 1000 per call
   if (req.params.n > 1000) {
     return res.status(400).json({
@@ -39,8 +39,5 @@ app.get("/:n", (req, res) => {
   });
 });
 
-// Listen it to a port
-const PORT = 4000 || process.env.PORT;
-app.listen(PORT, () => {
-  console.log("UUID server up and running");
-});
+// Allow testing libraries
+module.exports = app;
