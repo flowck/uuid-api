@@ -24,13 +24,15 @@ app.get("/api/:n", (req, res) => {
   }
 
   // Generate n uuids
-  let uuids = [];
-  for (let i = 0; i < req.params.n; i++) {
-    uuids.push({
+  const uuids = Array.from(
+    {
+      length: req.params.n
+    },
+    () => ({
       uuid: uuid(),
       createdAt: new Date()
-    });
-  }
+    })
+  );
 
   // Send a the uuids
   res.json({
