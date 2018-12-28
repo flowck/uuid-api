@@ -6,8 +6,10 @@
   "scripts": {
     "p": "prettier --write 'src/**/*.js'",
     "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
-    "start": "nodemon src/application.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pt": "prettier --write 'src/**/*.js'",
+    "pt:w": "onchange 'tests/**/*.js' -- prettier --write {{changed}}",
+    "start": "nodemon tests/server.js",
+    "test": "mocha tests/application.test.js"
   },
   "keywords": [
     "node",
@@ -29,6 +31,10 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "chai-uuid": "^1.0.6",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
     "onchange": "^5.2.0",
     "prettier": "^1.15.3"
