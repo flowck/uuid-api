@@ -52,6 +52,8 @@ As simple as that: This api will respond with brand new uuid:
 
 * Run prettier: ```npm run p:w``` 
 
+* Tests: npm test
+
 # MIT License
 
 Copyright 2018 Firmino Changani
