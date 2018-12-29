@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 
 // Enable cors of course
-app.use(cors);
+app.use(cors());
 
 // Get a single uuid
 app.get("/api/", (req, res) => {
