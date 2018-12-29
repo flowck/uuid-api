@@ -1,9 +1,13 @@
 // Dependencies
 const express = require("express");
 const uuid = require("uuidv4");
+const cors = require("cors");
 
 // Run the server application
 const app = express();
+
+// Enable cors of course
+app.use(cors);
 
 // Get a single uuid
 app.get("/api/", (req, res) => {
