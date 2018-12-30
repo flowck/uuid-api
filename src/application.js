@@ -9,7 +9,9 @@ const app = express();
 // Enable cors of course
 app.use(cors());
 
-// Get a single uuid
+/*
+ * Get a single uuid
+ */
 app.get("/api/", (req, res) => {
   res.json({
     uuid: uuid(),
@@ -18,7 +20,10 @@ app.get("/api/", (req, res) => {
   });
 });
 
-// Get a n uuid
+/*
+ * Get a single uuid
+ * @params {n} Number
+ */
 app.get("/api/:n", (req, res) => {
   // Limit the response to 1000 per call
   if (req.params.n > 1000) {
@@ -38,12 +43,10 @@ app.get("/api/:n", (req, res) => {
     })
   );
 
-  // Send a the uuids
   res.json({
     uuids,
     version: 4
   });
 });
 
-// Allow testing libraries
 module.exports = app;
