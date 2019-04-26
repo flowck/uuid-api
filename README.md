@@ -1,10 +1,12 @@
 # uuid-api
 
+[![Build Status](https://travis-ci.com/flowck/uuid-api.svg?branch=master)](https://travis-ci.com/flowck/uuid-api)
+
 As simple as that: This api will respond with brand new uuid:
 
 **Get a single uuid**
 
-/api/
+/api/uuids
 
 
 ```
@@ -17,7 +19,7 @@ As simple as that: This api will respond with brand new uuid:
 
 **Get a :n uuids**
 
-/api/4
+/api/uuids/1000
 
 
 ```
