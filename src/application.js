@@ -1,3 +1,7 @@
+/**
+ * application.js
+ */
+
 // Dependencies
 const express = require("express");
 const uuid = require("uuidv4");
@@ -9,7 +13,7 @@ const app = express();
 // Enable cors of course
 app.use(cors());
 
-/*
+/**
  * Get a single uuid
  */
 app.get("/api/", (req, res) => {
@@ -20,9 +24,9 @@ app.get("/api/", (req, res) => {
   });
 });
 
-/*
+/**
  * Get a single uuid
- * @params {n} Number
+ * @param {number} n
  */
 app.get("/api/:n", (req, res) => {
   // Limit the response to 1000 per call
