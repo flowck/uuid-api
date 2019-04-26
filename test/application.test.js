@@ -20,7 +20,7 @@ describe("UUIDs", () => {
     it("It should GET a single UUID", done => {
       chai
         .request(application)
-        .get("/api/")
+        .get("/api/uuids")
         .end((err, res) => {
           if (err) throw err;
           res.should.have.status(200);
@@ -32,7 +32,7 @@ describe("UUIDs", () => {
     it("It should GET 10 UUIDs", done => {
       chai
         .request(application)
-        .get("/api/10")
+        .get("/api/uuids/10")
         .end((err, res) => {
           if (err) throw err;
           res.should.have.status(200);
