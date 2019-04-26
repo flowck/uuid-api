@@ -1,7 +1,10 @@
 sudo: false
 language: node_js
-node_js: 
-  - "stable"
+node_js:
+- stable
 cache:
   directories:
-    - "$HOME/.npm"
+  - "$HOME/.npm"
+deploy:
+  api_key:
+    secure: hdzfUAU5ZVUevAV2SXQGNw2EDOMH/0FBWS5Yo/AEzDOcM8BAh9nHW6OrDmxtd1Y/SklUAtvA5a9vVSMPnPOb4YSvEWLT1my88cwRlNWj923V+8DfG3Gol+AUWKVlZPXzuOGe0P6C4RC8H36LXkqXUltw4LXAurycjYZ+JbRYnN5G6ON1/GMrosmA/QPEPMvpRsuRkYKCjm4UtUQCX1gqLnZVXMUlKyc1sGKxYNV6HZmBPxLynpi52ueeDNVqxtGhXBsRXQuG+f1GFuw0Scmrtp+pD9+N5uOBttl/F/ghP4n06d6fCkpgtjrRtYCwUl6Bz3PAAyEk24T/tHD95BdmcrMGKq3plBTSakZwZfXXSxZ7PBwCb8zpU8ONIFbVzIOm2d9buesHrTDAuNIh+RyABkYlGXsjkwChWgBpUAaUPY/13sVjXvU/sdvEywF/UKxQet5BSNZMZz5e2hzZW3LaW0s8Jv04bezO4mNj9KrFglYs34Io9xmq9mpOZaJrwmJsl1w+TcsIeZrybv57lDF8g1F1yIgnA9OwbA/Bsfl+VaZ+aGiyMqyrXPvybHnn1ougfFtBGruLOzRBFaIYOdkrSy8IT2rHRJFLD4zudn/kWmfC1QbhN6PlMNBl+A7jD8ny18r0Qf3XGwMQDFzGjbpEdt8KliJY0gk+0BRtunAIHQw=
