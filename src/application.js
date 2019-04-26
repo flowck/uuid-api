@@ -6,11 +6,18 @@
 const express = require("express");
 const uuid = require("uuidv4");
 const cors = require("cors");
+const compression = require("compression");
 
 // Run the server application
 const app = express();
 
-// Enable cors of course
+/**
+ * API configurations
+ */
+
+// Enable compression
+app.use(compression());
+// Enable cors for external services to consume this api
 app.use(cors());
 
 /**
