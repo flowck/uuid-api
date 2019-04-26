@@ -16,7 +16,7 @@ app.use(cors());
 /**
  * Get a single uuid
  */
-app.get("/api/", (req, res) => {
+app.get("/api/uuids", (req, res) => {
   res.json({
     uuid: uuid(),
     version: 4,
@@ -28,7 +28,7 @@ app.get("/api/", (req, res) => {
  * Get a single uuid
  * @param {number} n
  */
-app.get("/api/:n", (req, res) => {
+app.get("/api/uuids/:n", (req, res) => {
   // Limit the response to 1000 per call
   if (req.params.n > 1000) {
     return res.status(400).json({
