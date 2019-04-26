@@ -53,4 +53,8 @@ app.get("/api/uuids/:n", (req, res) => {
   });
 });
 
+app.get("*", (req, res) => {
+  res.json({ message: "Route not found" });
+});
+
 module.exports = app;
